@@ -16,8 +16,13 @@ export default function StoreLocator() {
       <FilterDistributor setLocation={setLocation} />
       <div className="grid grid-cols-2 border-2 shadow-lg">
         {selectedDistributor ? (
-          <div>
-            <div onClick={() => setDistributor(null)}>Back to Maps</div>
+          <div className="p-4 text-left">
+            <div
+              className="font-bold text-xl mb-2 p-2 pl-0 border-b-2 text-blue-500 underline cursor-pointer"
+              onClick={() => setDistributor(null)}
+            >
+              Back to Maps
+            </div>
             <div>{selectedDistributor.name}</div>
             <div>{selectedDistributor.address}</div>
             <div>{selectedDistributor.phone}</div>
