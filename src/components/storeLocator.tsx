@@ -2,6 +2,7 @@ import { DISTRIBUTORS } from "../data/distributor";
 import FilterDistributor from "./filterDistributor";
 import { useState } from "react";
 import MapDistributor from "./mapDistributor";
+import UploadDistributor from "./uploadDistributor";
 export default function StoreLocator() {
   const [selectedDistributor, setDistributor] = useState();
   const [location, setLocation] = useState("");
@@ -11,6 +12,7 @@ export default function StoreLocator() {
   return (
     <div>
       <h1>Store Locator</h1>
+      <UploadDistributor />
       <FilterDistributor setLocation={setLocation} />
       <div className="grid grid-cols-2 border-2 shadow-lg">
         {selectedDistributor ? (
